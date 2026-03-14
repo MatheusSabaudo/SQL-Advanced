@@ -36,3 +36,5 @@ WHERE score IS NULL
 
 DELETE FROM customers
 WHERE cust_id > 5
+
+TRUNCATE TABLE persons
