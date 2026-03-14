@@ -1,20 +1,3 @@
--- =============================================================
--- PostgreSQL Database Creation and Table Setup Script
--- =============================================================
--- WARNING:
--- This script assumes you are manually connected to the 'postgres' database
--- and have the privileges to drop/create databases and schemas.
--- It drops the 'salesdb' database if it exists.
-
--- DROP AND CREATE DATABASE
-DROP DATABASE IF EXISTS salesdb;
-CREATE DATABASE salesdb;
-
--- Connect to the new database (manual step in most PostgreSQL tools)
-
--- Now switch to the salesdb database to execute the following
-
--- Create schema
 DROP SCHEMA IF EXISTS sales CASCADE;
 CREATE SCHEMA sales;
 

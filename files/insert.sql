@@ -10,9 +10,13 @@ CREATE TABLE customers (
 )
 
 
-INSERT INTO customers (id, first_name, country, score)
-VALUES 
-    (6, 'Matteo', 'IT', NULL),
-    (7, 'Sam', 'USA', NULL)
+-- INSERT INTO customers (id, first_name, country, score)
+-- VALUES 
+--     (6, 'Matteo', 'IT', NULL),
+--     (7, 'Sam', 'USA', NULL)
 
 
+-- insert data from 'customers' into 'persons'
+
+INSERT INTO persons (id, person_name, birth_date, cell)
+SELECT id, person_name, NULL, 'Unknown'
