@@ -1,5 +1,5 @@
 -- PERSONS
-INSERT INTO persons (id, person_name, birth_date, cell) VALUES
+INSERT INTO persons (person_id, person_name, birth_date, cell) VALUES
 (1, 'Luca Bianchi', '1990-05-12', '3201111111'),
 (2, 'Marco Rossi', '1988-03-21', '3202222222'),
 (3, 'Giulia Ferrari', '1995-07-30', '3203333333'),

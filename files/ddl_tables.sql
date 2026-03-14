@@ -1,18 +1,17 @@
 CREATE TABLE persons (
-	id INT NOT NULL,
+	person_id INT NOT NULL,
 	person_name VARCHAR(50) NOT NULL,
 	birth_date DATE,
 	cell VARCHAR(15) NOT NULL,
-	CONSTRAINT pk_persons PRIMARY KEY(id)
+	CONSTRAINT pk_persons PRIMARY KEY(person_id)
 );
 
-
 CREATE TABLE customers (
-	id INT NOT NULL,
+	cust_id INT NOT NULL,
 	first_name VARCHAR(30) NOT NULL,
 	country VARCHAR(30) NOT NULL,
 	score INT,
-	CONSTRAINT pk_customers PRIMARY KEY(id)
+	CONSTRAINT pk_customers PRIMARY KEY(cust_id)
 );
 
 CREATE TABLE employees (
