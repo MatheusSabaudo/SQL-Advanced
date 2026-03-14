@@ -13,7 +13,7 @@ INSERT INTO persons (id, person_name, birth_date, cell) VALUES
 
 
 -- CUSTOMERS
-INSERT INTO customers (id, first_name, country, score) VALUES
+INSERT INTO customers (cust_id, first_name, country, score) VALUES
 (1, 'Luca', 'Italy', 120),
 (2, 'Marco', 'Italy', 90),
 (3, 'Anna', 'Germany', 150),
