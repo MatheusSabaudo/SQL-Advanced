@@ -1,3 +1,4 @@
+-- Active: 1773430941444@@127.0.0.1@5432@sql-advanced
 DROP TABLE customers
 
 CREATE TABLE customers (
@@ -13,3 +14,5 @@ INSERT INTO customers (id, first_name, country, score)
 VALUES 
     (6, 'Matteo', 'IT', NULL),
     (7, 'Sam', 'USA', NULL)
+
+
