@@ -35,3 +35,15 @@ SELECT
 FROM customers c
 RIGHT JOIN orders o
 ON c.cust_id = o.cust_id
+
+-- Full Join
+
+SELECT
+    c.cust_id,
+    c.first_name,
+    c.country,
+    o.order_id,
+    o.order_status
+FROM customers c
+FULL JOIN orders o
+ON c.cust_id = o.cust_id
