@@ -92,3 +92,20 @@ SELECT
     o.order_status
 FROM customers c
 CROSS JOIN orders o
+
+-- Multi table join
+
+SELECT 
+    o.quantity, 
+    o.order_id, 
+    p.product, 
+    p.price, 
+    c.first_name AS "Customer Name", 
+    e.first_name AS "Sales person's name"
+FROM orders o
+LEFT JOIN products p
+ON o.order_id = p.prod_id
+LEFT JOIN customers c
+ON o.order_id = c.cust_id
+LEFT JOIN employees e
+ON o.order_id = e.id
