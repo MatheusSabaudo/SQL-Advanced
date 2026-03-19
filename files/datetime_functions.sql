@@ -67,3 +67,31 @@ SELECT
     creation_time,
     CAST(DATE_TRUNC('month', creation_time) AS DATE) AS FirstDayOfMonth
 FROM orders;
+
+-- changing the format
+SELECT
+    price,
+    TO_CHAR(price, '$99999999.99') AS formatted_price
+FROM products;
+
+-- dateadd
+SELECT
+    creation_time,
+    creation_time + INTERVAL '1 year' AS Add1Year,
+    creation_time + INTERVAL '1 month' AS Add1Month,
+    creation_time + INTERVAL '1 day' AS Add1Day
+FROM orders
+
+-- datadiff
+SELECT 
+    creation_time,
+    DATE '2026-03-19' - creation_time::DATE AS diff_days
+FROM orders;
+
+-- Find the number of days between each order and the previous order
+SELECT 
+    order_id,
+    order_date AS CurrentOrderDate,
+    LAG(order_date) OVER (ORDER BY order_date) AS PreviousOrderDate,
+    order_date - LAG(order_date) OVER (ORDER BY order_date) AS Diff
+FROM orders;
