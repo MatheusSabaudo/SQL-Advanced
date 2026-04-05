@@ -7,7 +7,7 @@ BEGIN
     INSERT INTO EmployeeLogs(EmployeeID, LogMessage, LogDate)
     SELECT
         EmployeeID,
-        'New Employee Added to the table Employee - ID: ' + EmployeeID,
+        'New Employee Added to the table Employee - ID: ' + EmployeeID::TEXT,
         GETDATE()
     FROM INSERTED
 END
